@@ -1,0 +1,114 @@
+{
+  "name": "NSFNET_14_Node_Topology_Realistic",
+  "description": "Realistic NSFNET 14-node topology with heterogeneous attenuation, fiber quality, and hardware variations",
+  "nodes": [
+    {"name": "WA", "type": "QuantumRouter", "seed": 0},
+    {"name": "CA1", "type": "QuantumRouter", "seed": 1},
+    {"name": "CA2", "type": "QuantumRouter", "seed": 2},
+    {"name": "UT", "type": "QuantumRouter", "seed": 3},
+    {"name": "CO", "type": "QuantumRouter", "seed": 4},
+    {"name": "TX", "type": "QuantumRouter", "seed": 5},
+    {"name": "NE", "type": "QuantumRouter", "seed": 6},
+    {"name": "IL", "type": "QuantumRouter", "seed": 7},
+    {"name": "MI", "type": "QuantumRouter", "seed": 8},
+    {"name": "PA", "type": "QuantumRouter", "seed": 9},
+    {"name": "NY", "type": "QuantumRouter", "seed": 10},
+    {"name": "GA", "type": "QuantumRouter", "seed": 11},
+    {"name": "DC", "type": "QuantumRouter", "seed": 12},
+    {"name": "NJ", "type": "QuantumRouter", "seed": 13}
+  ],
+
+  "quantum_connections": [
+    {"nodes": ["WA", "CA1"], "distance": 1300000, "attenuation": 0.00018},
+    {"nodes": ["WA", "CA2"], "distance": 1100000, "attenuation": 0.00019},
+    {"nodes": ["CA1", "CA2"], "distance": 600000, "attenuation": 0.00020},
+    {"nodes": ["CA2", "UT"], "distance": 900000, "attenuation": 0.00022},
+    {"nodes": ["UT", "CO"], "distance": 600000, "attenuation": 0.00021},
+    {"nodes": ["CA2", "TX"], "distance": 1900000, "attenuation": 0.00024},
+    {"nodes": ["CO", "NE"], "distance": 700000, "attenuation": 0.00020},
+    {"nodes": ["TX", "NE"], "distance": 1100000, "attenuation": 0.00025},
+    {"nodes": ["TX", "GA"], "distance": 1200000, "attenuation": 0.00027},
+    {"nodes": ["NE", "IL"], "distance": 800000, "attenuation": 0.00021},
+    {"nodes": ["IL", "MI"], "distance": 400000, "attenuation": 0.00020},
+    {"nodes": ["IL", "PA"], "distance": 900000, "attenuation": 0.00023},
+    {"nodes": ["MI", "NY"], "distance": 800000, "attenuation": 0.00024},
+    {"nodes": ["PA", "NY"], "distance": 500000, "attenuation": 0.00023},
+    {"nodes": ["PA", "DC"], "distance": 300000, "attenuation": 0.00025},
+    {"nodes": ["PA", "NJ"], "distance": 250000, "attenuation": 0.00026},
+    {"nodes": ["NY", "NJ"], "distance": 150000, "attenuation": 0.00027},
+    {"nodes": ["DC", "GA"], "distance": 900000, "attenuation": 0.00026},
+    {"nodes": ["DC", "NJ"], "distance": 350000, "attenuation": 0.00025},
+    {"nodes": ["GA", "TX"], "distance": 1200000, "attenuation": 0.00028},
+    {"nodes": ["IL", "GA"], "distance": 1100000, "attenuation": 0.00027}
+  ],
+
+  "classical_connections": [
+    {"nodes": ["WA", "CA1"], "distance": 1300000, "delay": 4333333.333},
+    {"nodes": ["WA", "CA2"], "distance": 1100000, "delay": 3666666.667},
+    {"nodes": ["CA1", "CA2"], "distance": 600000, "delay": 2000000.0},
+    {"nodes": ["CA2", "UT"], "distance": 900000, "delay": 3000000.0},
+    {"nodes": ["UT", "CO"], "distance": 600000, "delay": 2000000.0},
+    {"nodes": ["CA2", "TX"], "distance": 1900000, "delay": 6333333.333},
+    {"nodes": ["CO", "NE"], "distance": 700000, "delay": 2333333.333},
+    {"nodes": ["TX", "NE"], "distance": 1100000, "delay": 3666666.667},
+    {"nodes": ["TX", "GA"], "distance": 1200000, "delay": 4000000.0},
+    {"nodes": ["NE", "IL"], "distance": 800000, "delay": 2666666.667},
+    {"nodes": ["IL", "MI"], "distance": 400000, "delay": 1333333.333},
+    {"nodes": ["IL", "PA"], "distance": 900000, "delay": 3000000.0},
+    {"nodes": ["MI", "NY"], "distance": 800000, "delay": 2666666.667},
+    {"nodes": ["PA", "NY"], "distance": 500000, "delay": 1666666.667},
+    {"nodes": ["PA", "DC"], "distance": 300000, "delay": 1000000.0},
+    {"nodes": ["PA", "NJ"], "distance": 250000, "delay": 833333.333},
+    {"nodes": ["NY", "NJ"], "distance": 150000, "delay": 500000.0},
+    {"nodes": ["DC", "GA"], "distance": 900000, "delay": 3000000.0},
+    {"nodes": ["DC", "NJ"], "distance": 350000, "delay": 1166666.667},
+    {"nodes": ["GA", "TX"], "distance": 1200000, "delay": 4000000.0},
+    {"nodes": ["IL", "GA"], "distance": 1100000, "delay": 3666666.667}
+  ],
+
+  "hardware_config": {
+    "memory": {
+      "frequency": 2000.0,
+      "efficiency": 1.0,
+      "fidelity": 0.995,
+      "coherence_time": 1.0e12,
+      "wavelength": 500
+    },
+    "bsm_detector": {
+      "efficiency": 0.98,
+      "count_rate": 1.0e8,
+      "time_resolution": 100,
+      "dark_count": 10
+    },
+    "quantum_channel": {
+      "polarization_fidelity": 0.99,
+      "frequency": 8.0e7
+    },
+    "entanglement_source": {
+      "frequency": 8.0e7,
+      "efficiency": 1.0,
+      "fidelity": 0.99,
+      "wavelength": 500
+    }
+  },
+
+  "node_overrides": {
+    "TX": {"memory": {"coherence_time": 6.0e11}},
+    "GA": {"memory": {"coherence_time": 7.0e11}},
+    "DC": {"bsm_detector": {"efficiency": 0.96}},
+    "NJ": {"bsm_detector": {"efficiency": 0.95}},
+    "NY": {"entanglement_source": {"fidelity": 0.985}}
+  },
+
+  "simulation_config": {
+    "stop_time": 1.0e13,
+    "seed": 0,
+    "logging_level": "INFO"
+  },
+
+  "protocol_stack": {
+    "entanglement_generation": "DefaultEntanglementProtocol",
+    "entanglement_purification": "BBPSSW",
+    "entanglement_swapping": "DefaultSwappingProtocol"
+  }
+}

@@ -1,0 +1,29 @@
+
+======================================================================
+SIMULATION METRICS SUMMARY
+======================================================================
+
+Protocol Comparison:
+----------------------------------------------------------------------
+Metric                         FASP                 Baseline            
+----------------------------------------------------------------------
+Average Fidelity               0.3974           0.3961
+Average Hops                   5.21             5.21
+Average Throughput (ent/s)     889.6430         890.5814
+Success Rate                   87.63%          87.84%
+
+FASP Improvements:
+----------------------------------------------------------------------
+Fidelity Gain: +0.0013 (+0.32%)
+Hop Difference: +0.00
+Throughput Ratio: 1.00x
+
+Memory Utilization (Top 5 Nodes):
+----------------------------------------------------------------------
+Frankfurt  Utilization:  24.55% Avg Occupancy:     0.50ms
+Berlin     Utilization:  19.39% Avg Occupancy:     0.50ms
+Vienna     Utilization:  19.26% Avg Occupancy:     0.50ms
+Munich     Utilization:  14.90% Avg Occupancy:     0.50ms
+Prague     Utilization:  14.88% Avg Occupancy:     0.50ms
+======================================================================
+

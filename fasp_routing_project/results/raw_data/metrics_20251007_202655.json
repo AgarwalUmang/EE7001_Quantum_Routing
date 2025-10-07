@@ -1,0 +1,29 @@
+{
+  "entanglement_records": [],
+  "path_metrics": {
+    "fasp": [],
+    "baseline": []
+  },
+  "memory_utilization": [],
+  "comparison": {
+    "fasp": {
+      "avg_fidelity": 0,
+      "avg_hops": 0,
+      "avg_throughput": 0,
+      "avg_success_rate": 0,
+      "num_paths": 0
+    },
+    "baseline": {
+      "avg_fidelity": 0,
+      "avg_hops": 0,
+      "avg_throughput": 0,
+      "avg_success_rate": 0,
+      "num_paths": 0
+    }
+  },
+  "simulation_info": {
+    "start_time": 0,
+    "end_time": 4000000000000.0,
+    "duration": 4.0
+  }
+}

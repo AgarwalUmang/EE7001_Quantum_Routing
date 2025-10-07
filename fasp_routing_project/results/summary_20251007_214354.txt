@@ -1,0 +1,29 @@
+
+======================================================================
+SIMULATION METRICS SUMMARY
+======================================================================
+
+Protocol Comparison:
+----------------------------------------------------------------------
+Metric                         FASP                 Baseline            
+----------------------------------------------------------------------
+Average Fidelity               0.5113           0.4673
+Average Hops                   4.06             3.71
+Average Throughput (ent/s)     1170.4138         1152.9116
+Success Rate                   90.13%          88.47%
+
+FASP Improvements:
+----------------------------------------------------------------------
+Fidelity Gain: +0.0439 (+9.40%)
+Hop Difference: +0.35
+Throughput Ratio: 1.02x
+
+Memory Utilization (Top 5 Nodes):
+----------------------------------------------------------------------
+GA         Utilization:  30.59% Avg Occupancy:     0.50ms
+TX         Utilization:  18.38% Avg Occupancy:     0.50ms
+CA2        Utilization:  16.25% Avg Occupancy:     0.50ms
+DC         Utilization:  15.73% Avg Occupancy:     0.50ms
+IL         Utilization:  13.38% Avg Occupancy:     0.50ms
+======================================================================
+
